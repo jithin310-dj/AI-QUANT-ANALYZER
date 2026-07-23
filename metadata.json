@@ -1,0 +1,6 @@
+{
+  "name": "AI Stock Analyzer",
+  "description": "A production-ready AI Stock Market Analysis & Prediction Platform with TradingView-style charts, ML technical indicators, NLP news sentiment, and an interactive AI Quant Advisor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

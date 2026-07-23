@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Outfit", sans-serif;
+
+  --color-slate-900: #0b0f19;
+  --color-slate-800: #111827;
+  --color-slate-700: #1f2937;
+  --color-slate-600: #374151;
+  --color-teal-500: #14b8a6;
+  --color-teal-400: #2dd4bf;
+  --color-emerald-500: #10b981;
+  --color-rose-500: #f43f5e;
+}
+
+/* Custom glow and scrollbar utilities */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* TradingView style chart container custom glow */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-glow {
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(45, 212, 191, 0.15);
+  box-shadow: 0 0 25px rgba(20, 184, 166, 0.05);
+}
+
+/* HIGH CONTRAST LIGHT MODE OVERRIDES */
+html.light-mode,
+body.light-mode {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  color-scheme: light;
+}
+
+html.light-mode body {
+  background-color: #f1f5f9 !important;
+}
+
+html.light-mode ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+html.light-mode ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+html.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+html.light-mode .bg-slate-900,
+html.light-mode .bg-slate-950,
+html.light-mode .bg-gray-950,
+html.light-mode .bg-gray-900 {
+  background-color: #ffffff !important;
+}
+
+html.light-mode .bg-slate-900\/40,
+html.light-mode .bg-slate-900\/70,
+html.light-mode .bg-slate-900\/80,
+html.light-mode .bg-slate-900\/90,
+html.light-mode .bg-gray-950\/40,
+html.light-mode .bg-gray-950\/80,
+html.light-mode .bg-gray-900\/50 {
+  background-color: #ffffff !important;
+}
+
+html.light-mode .bg-slate-800,
+html.light-mode .bg-gray-800,
+html.light-mode .bg-gray-850 {
+  background-color: #f8fafc !important;
+}
+
+html.light-mode .bg-slate-800\/40,
+html.light-mode .bg-slate-800\/50,
+html.light-mode .bg-slate-800\/80,
+html.light-mode .bg-gray-800\/40,
+html.light-mode .bg-gray-800\/50 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light-mode .glass-panel {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light-mode .glass-panel-glow {
+  background: #ffffff !important;
+  border-color: #0d9488 !important;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.1) !important;
+}
+
+html.light-mode .border-gray-800,
+html.light-mode .border-gray-800\/40,
+html.light-mode .border-gray-800\/60,
+html.light-mode .border-gray-800\/80,
+html.light-mode .border-gray-850,
+html.light-mode .border-gray-850\/60,
+html.light-mode .border-gray-700 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light-mode .text-white,
+html.light-mode .text-gray-100,
+html.light-mode .text-gray-200 {
+  color: #0f172a !important;
+}
+
+html.light-mode .text-gray-300,
+html.light-mode .text-gray-400 {
+  color: #334155 !important;
+}
+
+html.light-mode .text-gray-500 {
+  color: #64748b !important;
+}
+
+html.light-mode .text-teal-400 {
+  color: #0d9488 !important;
+}
+
+html.light-mode .bg-teal-500\/10,
+html.light-mode .bg-teal-500\/20 {
+  background-color: rgba(13, 148, 136, 0.12) !important;
+}
+
+html.light-mode .border-teal-500\/20,
+html.light-mode .border-teal-500\/40 {
+  border-color: rgba(13, 148, 136, 0.3) !important;
+}
+
+@keyframes slide-ticker {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: slide-ticker 30s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
